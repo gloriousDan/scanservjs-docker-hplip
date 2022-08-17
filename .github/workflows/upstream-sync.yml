@@ -20,7 +20,7 @@ jobs:
       with:
         # optional: set the branch to checkout,
         # sync action checks out your 'target_sync_branch' anyway
-        ref:  master
+        ref:  master-upstream
 
     # REQUIRED step
     # Step 2: run the sync action
@@ -32,8 +32,9 @@ jobs:
         # REQUIRED 'target_repo_token' exactly like this!
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
         upstream_sync_branch: master
-        upstream_sync_repo: aormsby/Fork-Sync-With-Upstream-action
+        upstream_sync_repo: sbs20/scanservjs
         upstream_pull_args: "--tags"
+        test_mode: true
       
     # Step 3: Display a sample message based on the sync output var 'has_new_commits'
     - name: New commits found
