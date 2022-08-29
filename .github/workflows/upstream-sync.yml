@@ -47,3 +47,7 @@ jobs:
       
     - name: Show value of 'has_new_commits'
       run: echo ${{ steps.sync.outputs.has_new_commits }}
+
+    - name: Dispatch the latest build
+      if: steps.sync.outputs.has_new_commits == 'true'
+      run: gh workflow run docker.yml 
