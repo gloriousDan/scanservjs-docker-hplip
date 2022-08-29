@@ -8,7 +8,6 @@ on:
       - 'README.md'
     branches:
       - 'master-upstream'
-        #- 'staging'
     tags:
       - 'v*'
   release:
