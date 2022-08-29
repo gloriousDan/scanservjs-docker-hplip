@@ -9,6 +9,8 @@ on:
     branches:
       - 'master-upstream'
         #- 'staging'
+    tags:
+      - 'v*'
   release:
     types: [published]
 
