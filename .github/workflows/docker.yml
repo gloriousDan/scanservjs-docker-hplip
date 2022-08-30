@@ -2,14 +2,14 @@ name: docker-build
 
 on:
   workflow_dispatch:
-  push:
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
-    branches:
-      - 'master-upstream'
-    tags:
-      - 'v*'
+#  push:
+#    paths-ignore:
+#      - 'docs/**'
+#      - 'README.md'
+#    branches:
+#      - 'master-upstream'
+#    tags:
+#      - 'v*'
   release:
     types: [published]
 
@@ -42,7 +42,7 @@ jobs:
       #    platforms: linux/amd64,linux/arm64,linux/arm/v7
 
       - name: Push master
-        if: github.ref == 'refs/heads/master-upstream'
+        #if: github.ref == 'refs/heads/master-upstream'
         uses: docker/build-push-action@v2
         with:
           push: true
