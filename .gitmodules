@@ -1,0 +1,5 @@
+[submodule "scanserjvs"]
+	path = scanserjvs
+	url = git@github.com:sbs20/scanservjs.git
+[submodule "scanservjs"]
+	branch = v2.21.0
